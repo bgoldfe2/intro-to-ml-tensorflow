@@ -124,7 +124,7 @@ def main():
     img, probs, classes = predict(args.img_file, model,args.top_k)
     #show_img(img)
     print(probs)
-    print(classes+1)  # labels start at one, np.array at 0
+    print(get_names(classes+1,class_names)  # labels start at one, np.array at 0
 
     plot_pred(img,probs, classes, class_names)
 
