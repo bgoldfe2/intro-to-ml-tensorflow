@@ -123,9 +123,10 @@ def main():
     
     img, probs, classes = predict(args.img_file, model,args.top_k)
     #show_img(img)
-    print(probs)
-    print(get_names(classes+1,class_names)  # labels start at one, np.array at 0
-
+    print('Probabilities: ',probs)
+    print('Flower names: ',get_names(classes,class_names))  # labels start at one, np.array at 0
+    #print(classes)
+    #print(class_names)
     plot_pred(img,probs, classes, class_names)
 
 
